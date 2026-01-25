@@ -1,0 +1,26 @@
+.theme-toggle-btn {
+  all: unset;
+  display: flex;
+  align-items: center;
+  border-radius: var(--radius);
+  min-height: calc(var(--closed-sidebar-width) - 20px);
+  margin-top: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color var(--transition-timing);
+}
+
+.theme-toggle-btn:focus-visible {
+  outline: 2px solid var(--foreground);
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--secondary);
+}
+
+.theme-toggle-btn svg {
+  pointer-events: none;
+  min-width: calc(var(--closed-sidebar-width) - 20px);
+  font-size: 1.3rem;
+}

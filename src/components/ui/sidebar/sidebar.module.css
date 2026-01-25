@@ -1,0 +1,35 @@
+.sidebar {
+  --sidebar-width: 270px;
+  --closed-sidebar-width: 70px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--popover);
+  color: var(--popover-foreground);
+  border-right: 1px solid var(--border);
+  min-width: var(--sidebar-width);
+  max-width: var(--sidebar-width);
+  padding: 20px 10px;
+  transition:
+    background-color var(--transition-timing),
+    border var(--transition-timing),
+    color var(--transition-timing);
+}
+
+.closed {
+  min-width: var(--closed-sidebar-width);
+  max-width: var(--closed-sidebar-width);
+}
+
+.logo-wrapper {
+  font-size: 2rem;
+}
+
+.logo-wrapper svg {
+  min-width: calc(var(--closed-sidebar-width) - 20px);
+}
+
+.nav {
+  margin-top: 55px;
+}

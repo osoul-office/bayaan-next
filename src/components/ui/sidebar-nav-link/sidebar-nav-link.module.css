@@ -1,0 +1,32 @@
+.nav-link {
+  display: flex;
+  align-items: center;
+  color: var(--foreground);
+  border-radius: var(--radius);
+  min-height: calc(var(--closed-sidebar-width) - 20px);
+  overflow: hidden;
+  transition:
+    background-color var(--transition-timing),
+    color var(--transition-timing);
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.icon {
+  pointer-events: none;
+  min-width: calc(var(--closed-sidebar-width) - 20px);
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 0;
+}
+
+.active {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.active:hover {
+  color: var(--accent-foreground);
+}

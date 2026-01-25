@@ -1,0 +1,33 @@
+.sidebar-toggle-btn {
+  all: unset;
+  position: absolute;
+  top: 1.6rem;
+  right: -1px;
+  display: flex;
+  background-color: var(--popover);
+  color: var(--popover-foreground);
+  border: 1px solid var(--border);
+  border-right: 1px solid transparent;
+  border-radius: 4px 0 0 4px;
+  padding: 5px;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-timing),
+    border var(--transition-timing),
+    color var(--transition-timing);
+}
+
+.sidebar-toggle-btn:hover {
+  background-color: var(--secondary);
+}
+
+.rotate180 {
+  transform: rotate(-180deg);
+}
+
+.move-outside {
+  right: calc(-1em - 11px);
+  border-right: 1px solid var(--border);
+  border-left: 1px solid transparent;
+  border-radius: 0 4px 4px 0;
+}

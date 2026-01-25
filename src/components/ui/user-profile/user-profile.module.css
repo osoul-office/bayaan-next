@@ -1,0 +1,51 @@
+.user-profile {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--popover);
+  border-radius: 2rem;
+  padding: 0 1rem;
+  transition: background-color var(--transition-timing);
+}
+
+.avatar {
+  object-fit: cover;
+  border-radius: 9999px;
+  height: 40px;
+  aspect-ratio: 1 / 1;
+}
+
+.username,
+.email {
+  display: block;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.email {
+  color: var(--muted-foreground);
+  transition: color var(--transition-timing);
+}
+
+.modal-btn {
+  color: var(--foreground);
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  font-size: 1.5rem;
+  line-height: 0;
+  cursor: pointer;
+  transition:
+    color var(--transition-timing),
+    background-color var(--transition-timing),
+    border-color var(--transition-timing);
+}
+
+.modal-btn:hover {
+  background-color: var(--secondary);
+  border-color: var(--foreground);
+}
