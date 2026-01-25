@@ -1,13 +1,59 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #eeeeee;
+  --foreground: #121212;
+
+  --card: #d0d0d0;
+  --card-foreground: #343434;
+
+  --popover: #e0e0e0;
+  --popover-foreground: #242424;
+
+  --primary: #006576;
+  --primary-foreground: #00a2be;
+
+  --secondary: #d0d0d0;
+  --secondary-foreground: #343434;
+
+  --muted: #3434344b;
+  --muted-foreground: #595959;
+
+  --accent: #00c7eb;
+  --accent-foreground: #121212;
+
+  --border: #d0d0d0;
+  --scrollbar: #808080;
+  --selection: #808080;
+
+  --radius: 0.5rem;
+
+  --transition-timing: 0.2s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root.dark {
+  --background: #121212;
+  --foreground: #eeeeee;
+
+  --card: #343434;
+  --card-foreground: #d0d0d0;
+
+  --popover: #242424;
+  --popover-foreground: #e0e0e0;
+
+  --primary: #00a2be;
+  --primary-foreground: #006576;
+
+  --secondary: #343434;
+  --secondary-foreground: #d0d0d0;
+
+  --muted: #7272724b;
+  --muted-foreground: #9c9c9c;
+
+  --accent: #00bbdd;
+  --accent-foreground: #121212;
+
+  --border: #343434;
+  --scrollbar: #808080;
+  --selection: #808080;
 }
 
 html,
@@ -19,20 +65,47 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, Tahoma, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--foreground);
+}
+
+::-moz-selection {
+  background-color: var(--selection);
+}
+
+::selection {
+  background-color: var(--selection);
 }
 
 @media (prefers-color-scheme: dark) {
