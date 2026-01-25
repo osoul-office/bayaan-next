@@ -1,0 +1,12 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  max-width: min-content;
+  font-family: Tahoma;
+  user-select: none;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: color var(--transition-timing);
+}
