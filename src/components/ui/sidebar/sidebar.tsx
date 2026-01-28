@@ -33,12 +33,12 @@ const navigationLinks: SidebarNavLinkProps[] = [
   },
   {
     href: paths.portal.revenue.getHref(),
-    label: "Revenue",
+    label: "Revenues",
     Icon: LuTrendingUp,
   },
   {
     href: paths.portal.expense.getHref(),
-    label: "Expense",
+    label: "Expenses",
     Icon: LuNotepadText,
   },
 ];
@@ -46,12 +46,12 @@ const navigationLinks: SidebarNavLinkProps[] = [
 const subNavigationLinks: SidebarNavLinkProps[] = [
   {
     href: paths.portal.revenueCategory.getHref(),
-    label: "Revenue Category",
+    label: "Revenue Categories",
     Icon: () => <></>,
   },
   {
     href: paths.portal.expenseCategory.getHref(),
-    label: "Expense Category",
+    label: "Expense Categories",
     Icon: () => <></>,
   },
 ];

@@ -9,24 +9,24 @@ export const paths = {
       getHref: () => "/portal/dashboard",
     },
     account: {
-      path: "/portal/account",
-      getHref: () => "/portal/account",
+      path: "/portal/accounts",
+      getHref: () => "/portal/accounts",
     },
     revenue: {
-      path: "/portal/revenue",
-      getHref: () => "/portal/revenue",
+      path: "/portal/revenues",
+      getHref: () => "/portal/revenues",
     },
     expense: {
-      path: "/portal/expense",
-      getHref: () => "/portal/expense",
+      path: "/portal/expenses",
+      getHref: () => "/portal/expenses",
     },
     expenseCategory: {
-      path: "/portal/expense-category",
-      getHref: () => "/portal/expense-category",
+      path: "/portal/expense-categories",
+      getHref: () => "/portal/expense-categories",
     },
     revenueCategory: {
-      path: "/portal/revenue-category",
-      getHref: () => "/portal/revenue-category",
+      path: "/portal/revenue-categories",
+      getHref: () => "/portal/revenue-categories",
     },
   },
 };

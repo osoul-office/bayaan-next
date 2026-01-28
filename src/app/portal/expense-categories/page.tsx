@@ -1,3 +1,3 @@
 export default function ExpenseCategory() {
-  return <h1>Expense Category</h1>;
+  return <h1>Expense Categories</h1>;
 }

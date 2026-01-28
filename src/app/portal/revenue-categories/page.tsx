@@ -1,3 +1,3 @@
 export default function RevenueCategory() {
-  return <h1>Revenue Category</h1>;
+  return <h1>Revenue Categories</h1>;
 }
