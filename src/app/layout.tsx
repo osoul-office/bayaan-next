@@ -1,4 +1,5 @@
 import { UIProvider } from "@/providers";
+import { themeScriptContent } from "@/utils/theme-script";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -19,8 +20,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.variable}>
+        <script dangerouslySetInnerHTML={{ __html: themeScriptContent }} />
         <UIProvider>{children}</UIProvider>
       </body>
     </html>

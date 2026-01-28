@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/set-state-in-effect */
+
 "use client";
 
 import {
@@ -7,7 +9,6 @@ import {
   useContext,
   useMemo,
 } from "react";
-import { Loader } from "@/components/ui";
 
 export const UIContext = createContext({
   isDark: false,
@@ -21,30 +22,27 @@ export const UIProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [isDark, setIsDark] = useState(false);
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    setMounted(true);
+
     const storedTheme = localStorage.getItem("theme");
     const prefersDark = window.matchMedia(
       "(prefers-color-scheme: dark)",
     ).matches;
-    const storedSidebar = localStorage.getItem("sidebar");
 
     const shouldBeDark =
       storedTheme === "dark" || (!storedTheme && prefersDark);
+
+    const storedSidebar = localStorage.getItem("sidebar");
     const shouldBeCollapsed = storedSidebar === "collapsed";
 
-    if (shouldBeDark) {
-      setIsDark(true);
-    }
-    if (shouldBeCollapsed) {
-      setIsSidebarCollapsed(true);
-    }
-
-    setMounted(true);
+    setIsDark(shouldBeDark);
+    setIsSidebarCollapsed(shouldBeCollapsed);
   }, []);
 
   useEffect(() => {
@@ -55,6 +53,7 @@ export const UIProvider = ({
 
   useEffect(() => {
     if (!mounted) return;
+
     localStorage.setItem(
       "sidebar",
       isSidebarCollapsed ? "collapsed" : "open",
@@ -71,10 +70,7 @@ export const UIProvider = ({
     [isDark, isSidebarCollapsed],
   );
 
-  if (!mounted) return <Loader />;
-
-  return <Loader />;
-  // return <UIContext.Provider value={value}>{children}</UIContext.Provider>;
+  return <UIContext.Provider value={value}>{children}</UIContext.Provider>;
 };
 
 export const useUIContext = () => useContext(UIContext);
