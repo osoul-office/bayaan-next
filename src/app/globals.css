@@ -20,6 +20,9 @@
   --accent: #00c7eb;
   --accent-foreground: #121212;
 
+  --danger: #ffcfc9;
+  --danger-foreground: #b10202;
+
   --border: #d0d0d0;
   --scrollbar: #808080;
   --selection: #808080;
@@ -50,6 +53,9 @@
 
   --accent: #00bbdd;
   --accent-foreground: #121212;
+
+  --danger: #3d2b29;
+  --danger-foreground: #d50000;
 
   --border: #343434;
   --scrollbar: #808080;

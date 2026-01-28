@@ -44,3 +44,7 @@
 .flip {
   transform: rotateZ(180deg);
 }
+
+.sub-nav a {
+  border-radius: 0;
+}

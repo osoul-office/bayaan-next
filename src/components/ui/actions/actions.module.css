@@ -1,0 +1,64 @@
+.actions {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.actions div {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.actions div:last-child {
+  margin-left: auto;
+}
+
+.actions button,
+.actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: inherit;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background-color var(--transition-timing),
+    color var(--transition-timing),
+    border-color var(--transition-timing);
+}
+
+.actions button:hover,
+.actions a:hover {
+  color: var(--primary);
+  border-color: var(--accent);
+}
+
+.actions .cta {
+  background-color: var(--primary);
+}
+
+.actions .cta:hover {
+  background-color: var(--accent);
+  color: inherit;
+  border-color: var(--border);
+}
+
+.actions .danger {
+  color: var(--danger-foreground);
+  border-color: var(--danger-foreground);
+}
+
+.actions .danger:hover {
+  background-color: var(--danger);
+  color: var(--danger-foreground);
+  border-color: var(--danger-foreground);
+}
