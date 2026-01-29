@@ -1,31 +1,27 @@
 export const paths = {
   home: {
-    path: "/",
     getHref: () => "/",
   },
   portal: {
     dashboard: {
-      path: "/portal/dashboard",
       getHref: () => "/portal/dashboard",
     },
-    account: {
-      path: "/portal/accounts",
+    accounts: {
       getHref: () => "/portal/accounts",
+      create: {
+        getHref: () => "/portal/accounts/create",
+      },
     },
-    revenue: {
-      path: "/portal/revenues",
+    revenues: {
       getHref: () => "/portal/revenues",
     },
-    expense: {
-      path: "/portal/expenses",
+    expenses: {
       getHref: () => "/portal/expenses",
     },
-    expenseCategory: {
-      path: "/portal/expense-categories",
+    expenseCategories: {
       getHref: () => "/portal/expense-categories",
     },
-    revenueCategory: {
-      path: "/portal/revenue-categories",
+    revenueCategories: {
       getHref: () => "/portal/revenue-categories",
     },
   },
