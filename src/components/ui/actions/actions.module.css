@@ -22,7 +22,7 @@
   align-items: center;
   gap: 0.5rem;
   background-color: transparent;
-  color: inherit;
+  color: var(--foreground);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 10px 15px;
@@ -44,11 +44,12 @@
 
 .actions .cta {
   background-color: var(--primary);
+  color: #eeeeee;
 }
 
 .actions .cta:hover {
   background-color: var(--accent);
-  color: inherit;
+  color: #eeeeee;
   border-color: var(--border);
 }
 

@@ -17,7 +17,7 @@ export const SidebarNavLink = ({
   Icon,
 }: SidebarNavLinkProps) => {
   const pathname = usePathname();
-  const isActive = pathname === href;
+  const isActive = pathname.includes(href);
 
   return (
     <Link

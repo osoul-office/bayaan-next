@@ -23,7 +23,7 @@ export const SidebarSubNav = ({
   const [height, setHeight] = useState(50);
   const containerRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
-  const matchesPath = links.some((link) => link.href === pathname);
+  const matchesPath = links.some((link) => pathname.includes(link.href));
 
   useLayoutEffect(() => {
     if (isOpen && containerRef.current) {
