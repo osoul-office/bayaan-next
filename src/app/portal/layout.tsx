@@ -1,5 +1,5 @@
 import styles from "./app-layout.module.css";
-import { Sidebar, SearchBar, UserProfile } from "@/components/ui";
+import { Sidebar, SearchBar, UserProfile, Toaster } from "@/components/ui";
 
 export default function AppLayout({
   children,
@@ -19,6 +19,12 @@ export default function AppLayout({
         </header>
         <main>{children}</main>
       </section>
+      <Toaster
+        id="portal"
+        position="bottom-right"
+        swipeDirections={["bottom", "right"]}
+        visibleToasts={5}
+      />
     </section>
   );
 }

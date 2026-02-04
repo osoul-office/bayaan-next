@@ -9,7 +9,11 @@ import {
   LuTrash,
 } from "react-icons/lu";
 
-export const Actions = () => {
+interface ActionsProps {
+  create: string;
+}
+
+export const Actions = ({ create }: ActionsProps) => {
   return (
     <section className={styles["actions"]}>
       <div>
@@ -32,7 +36,7 @@ export const Actions = () => {
         <button>
           <LuCloudDownload /> Export
         </button>
-        <Link href="#" className={styles["cta"]}>
+        <Link href={create} className={styles["cta"]}>
           <LuPlus /> Add new
         </Link>
       </div>
