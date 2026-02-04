@@ -1,0 +1,146 @@
+.form-wrapper {
+  position: relative;
+  border: 1px solid var(--muted-foreground);
+  border-radius: 1rem;
+  max-width: max(50%, 845px);
+  padding: 1.5rem;
+  margin-top: 50px;
+  transition: border-color var(--transition-timing);
+}
+
+.form-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(50%, -60%);
+  background-color: var(--popover);
+  font-size: 1.5rem;
+  transition: background-color var(--transition-timing);
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+}
+
+.form-field * {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.form-field:has(input:required) label::after {
+  content: "*";
+  color: var(--danger-foreground);
+  position: absolute;
+  right: -1ch;
+}
+
+.form label {
+  position: relative;
+  width: fit-content;
+  margin-left: 0.5rem;
+}
+
+.form input[type="text"],
+.form input[type="number"],
+.form textarea {
+  background-color: transparent;
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  outline: none;
+  width: 100%;
+  min-height: 2rem;
+  padding: 0.5rem 0.75rem;
+  transition:
+    color var(--transition-timing),
+    border-color var(--transition-timing),
+    background-color var(--transition-timing);
+}
+
+.form input[type="text"]:hover,
+.form input[type="number"]:hover,
+.form textarea:hover,
+.form input[type="text"]:focus,
+.form input[type="number"]:focus,
+.form textarea:focus {
+  border-color: var(--accent);
+}
+
+.form input[type="text"]:disabled,
+.form input[type="number"]:disabled,
+.form textarea:disabled {
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.form input[type="text"]:disabled:hover,
+.form input[type="number"]:disabled:hover,
+.form textarea:disabled:hover {
+  border-color: var(--border);
+}
+
+.form .col-span {
+  grid-column: 1 / -1;
+}
+
+.form .error {
+  color: var(--danger-foreground);
+  font-size: 0.75rem;
+  font-weight: 400;
+  height: 15px;
+}
+
+.root-error {
+  background-color: var(--danger);
+  color: var(--danger-foreground);
+  border: 1px solid var(--danger-foreground);
+  border-radius: 0.75rem;
+  max-width: max(50%, 845px);
+  font-size: 0.9rem;
+  padding: 0.75rem;
+  margin-top: 1rem;
+}
+
+.submit-btn {
+  display: block;
+  background-color: var(--primary);
+  color: var(--background);
+  border: none;
+  border-radius: var(--radius);
+  width: fit-content;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-timing),
+    color var(--transition-timing);
+}
+
+.submit-btn:hover {
+  background-color: var(--accent);
+}
+
+.submit-btn:disabled {
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.submit-btn:disabled:hover {
+  background-color: var(--muted);
+}
+
+@media (max-width: 767px) {
+  .form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
