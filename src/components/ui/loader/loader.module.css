@@ -8,12 +8,38 @@
   aspect-ratio: 1;
   border-radius: 50%;
   border: 8px solid;
-  border-color: var(--foreground) var(--background);
+  border-color: var(--foreground) transparent;
+  animation: l1 1s infinite;
+}
+
+.loader-small {
+  width: 16px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid;
+  border-color: var(--border) var(--border) var(--border) var(--foreground);
+  animation: l2 1s infinite linear;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.loader-large {
+  width: 80px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 12px solid;
+  border-color: var(--foreground) transparent;
   animation: l1 1s infinite;
 }
 
 @keyframes l1 {
   to {
     transform: rotate(0.5turn);
+  }
+}
+
+@keyframes l2 {
+  to {
+    transform: rotate(1turn);
   }
 }
