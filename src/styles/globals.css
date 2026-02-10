@@ -9,7 +9,7 @@
   --popover-foreground: #242424;
 
   --primary: #00778b;
-  --primary-foreground: #00a2be;
+  --primary-foreground: #eeeeee;
 
   --secondary: #d0d0d0;
   --secondary-foreground: #343434;
@@ -26,6 +26,13 @@
   --border: #d0d0d0;
   --scrollbar: #808080;
   --selection: #808080;
+  --shadow:
+    0 12px 40px -10px #0f172a26, 0 4px 12px -2px #0f172a14,
+    0 0 0 1px #3b82f61a;
+  --glass: #eeeeee99;
+  --hero-gradient:
+    #f8fbff 56%, #ebf3fa 65%, #dcebf6 75%, #cde2f1 84%, #bedaee 93%,
+    #afd1e8 100%;
 
   --radius: 0.5rem;
 
@@ -42,8 +49,8 @@
   --popover: #242424;
   --popover-foreground: #e0e0e0;
 
-  --primary: #0090a9;
-  --primary-foreground: #006576;
+  --primary: #00adcb;
+  --primary-foreground: #000000;
 
   --secondary: #343434;
   --secondary-foreground: #d0d0d0;
@@ -51,7 +58,7 @@
   --muted: #7272724b;
   --muted-foreground: #9c9c9c;
 
-  --accent: #00bbdd;
+  --accent: #00cbee;
   --accent-foreground: #121212;
 
   --danger: #ff424221;
@@ -60,12 +67,18 @@
   --border: #484848;
   --scrollbar: #808080;
   --selection: #808080;
+  --shadow:
+    0 12px 40px #0206174d, 0 0 120px #4f46e514, 0 0 4px 2px #ffffff1a;
+  --glass: #06080d99;
+  --hero-gradient:
+    #121212 56%, #103547 65%, #2c6b87 75%, #6c9bb7 84%, #bad0e9 93%,
+    #eeeeee 100%;
 }
 
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
