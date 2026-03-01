@@ -5,11 +5,16 @@ import { revalidatePath } from "next/cache";
 import { Account, AccountCreateInput } from "@/types";
 import { Result } from "@/lib/result";
 import { paths } from "@/config/paths";
-import { getPrismaErrorMessage } from "@/utils/get-prisma-error-msg";
+import { getPrismaErrorMessage } from "@/utils";
 
-export const getAccounts = async () => {
-  const accounts = await prisma.account.findMany();
-  return accounts;
+export const get = async () => {
+  try {
+    const accounts = await prisma.account.findMany();
+    return Result.success(accounts);
+  } catch (error) {
+    const errorMsg = getPrismaErrorMessage(error);
+    return Result.failure(errorMsg);
+  }
 };
 
 export const create = async (
