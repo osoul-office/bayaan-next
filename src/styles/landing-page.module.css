@@ -80,7 +80,7 @@
   background-position: 0% 90%;
   background-repeat: no-repeat;
   min-height: 100vh;
-  padding: 150px 0;
+  padding: 10% 0;
   text-align: center;
 }
 
@@ -363,7 +363,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .nav-links {
     display: none;
   }
